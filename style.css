@@ -1,0 +1,41 @@
+article {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 200px 1fr 50px;
+  grid-template-areas: "photo main" "nav main" "socials main";
+}
+
+article > * {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  grid-area: main;
+  background-color: blue;
+}
+
+#profile-image {
+  grid-area: photo;
+  background-color: lightskyblue;
+}
+
+/* Flexbox css */
+nav {
+  display: flex;
+}
+
+#features {
+  grid-area: nav;
+  flex-direction: column;
+  background-color: coral;
+}
+
+#socials {
+  grid-area: socials;
+  flex-direction: row;
+  background-color: maroon;
+}
+
+/*# sourceMappingURL=style.css.map */
