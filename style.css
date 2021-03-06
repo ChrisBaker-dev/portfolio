@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 article {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -19,10 +23,6 @@ article nav {
   display: flex;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 /* Flexbox css */
 #features {
   grid-area: nav;
@@ -34,6 +34,42 @@ article nav {
   grid-area: socials;
   flex-direction: row;
   background-color: maroon;
+}
+
+.contact-me {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  grid-template-rows: 1fr 75px 1fr 2fr 1fr;
+}
+.contact-me header {
+  grid-area: 1/1/2/-1;
+  background-color: blue;
+}
+.contact-me nav {
+  grid-area: 2/1/3/-1;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.contact-me nav button {
+  background-color: magenta;
+  border: 3px solid black;
+  width: 100%;
+  min-width: 50px;
+  min-height: 50px;
+}
+.contact-me #socials {
+  grid-area: 4/1/5/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.contact-me #socials button {
+  background-color: brown;
+  width: 100%;
+  height: 100%;
+  border: 3px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */
