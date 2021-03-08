@@ -39,7 +39,7 @@ article nav {
 .standard-layout {
   display: grid;
   grid-template-columns: 75px 1fr;
-  grid-template-rows: 1fr 75px 1fr 2fr 1fr;
+  grid-template-rows: auto 75px auto auto 700px;
 }
 .standard-layout header {
   grid-area: 1/1/2/-1;
@@ -94,11 +94,19 @@ article nav {
   flex-direction: column;
   align-items: center;
 }
-.standard-layout .projects .project-post {
+.standard-layout .projects .content {
+  flex: 1 1 auto;
+  overflow: auto;
+  min-height: 0;
+  padding: 20px;
+}
+.standard-layout .projects .content .project-post {
   width: 500px;
-  height: 100px;
+  height: 400px;
   background-color: seashell;
   border: 3px solid black;
+  overflow-y: scroll;
+  min-width: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
