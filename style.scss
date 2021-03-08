@@ -5,6 +5,32 @@
   box-sizing: border-box;
 }
 
+#main-nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 75px;
+  // Screen min width - phone
+  min-width: 400px;
+  background-color: lightblue;
+
+  button {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.stickyNav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+}
+
+.projects-header {
+  align-items: center;
+  font-size: 4em;
+}
 // Home-Page
 
 article {

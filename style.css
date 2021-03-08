@@ -2,6 +2,30 @@
   box-sizing: border-box;
 }
 
+#main-nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 75px;
+  min-width: 400px;
+  background-color: lightblue;
+}
+#main-nav button {
+  width: 100%;
+  height: 100%;
+}
+
+.stickyNav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.projects-header {
+  align-items: center;
+  font-size: 4em;
+}
+
 article {
   display: grid;
   grid-template-columns: 1fr 3fr;

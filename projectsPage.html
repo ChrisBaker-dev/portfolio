@@ -9,9 +9,15 @@
 
 </head>
 <body>
+    <header class="projects-header">Christopher's Fantastic Projects</header>
+    <nav id="main-nav">
+        <button>Home</button>
+        <button>Projects</button>
+        <button>Blog</button>
+        <button>Contact Me</button>
+    </nav>
     <article class="standard-layout">
         <header>Projects</header>
-        <nav>Navbar</nav>
         <nav id="socials"></nav>
         <main class="projects">
             <div class="content">
@@ -25,5 +31,19 @@
 
     </article>
     
+    <script>
+        window.onscroll = function() {stickyNavbar()};
+
+        var navbar =  document.getElementById("main-nav");
+        var sticky = navbar.offsetTop;
+
+        function stickyNavbar() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("stickyNav");
+            } else {
+                navbar.classList.remove("stickyNav");
+            }
+        }
+    </script>
 </body>
 </html>
