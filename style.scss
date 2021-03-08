@@ -18,7 +18,7 @@ article {
   width: 100%;
   height: 100vh;
 
-  main {
+  .home-page {
     grid-area: main;
     background-color: blue;
   }
@@ -48,8 +48,8 @@ article {
 }
 
 
-// Contact Me
-.contact-me {
+// Contact Me / Projects
+.standard-layout {
   display: grid;
   grid-template-columns: 75px 1fr;
   grid-template-rows: 1fr 75px 1fr 2fr 1fr;
@@ -108,6 +108,7 @@ article {
   }
 
 }
+
 
 
 

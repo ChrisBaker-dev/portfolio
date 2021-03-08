@@ -10,7 +10,7 @@ article {
   width: 100%;
   height: 100vh;
 }
-article main {
+article .home-page {
   grid-area: main;
   background-color: blue;
 }
@@ -36,43 +36,43 @@ article nav {
   background-color: maroon;
 }
 
-.contact-me {
+.standard-layout {
   display: grid;
   grid-template-columns: 75px 1fr;
   grid-template-rows: 1fr 75px 1fr 2fr 1fr;
 }
-.contact-me header {
+.standard-layout header {
   grid-area: 1/1/2/-1;
   background-color: blue;
 }
-.contact-me nav {
+.standard-layout nav {
   grid-area: 2/1/3/-1;
   background-color: lightblue;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.contact-me nav button {
+.standard-layout nav button {
   background-color: magenta;
   border: 3px solid black;
   width: 100%;
   min-width: 50px;
   min-height: 50px;
 }
-.contact-me #socials {
+.standard-layout #socials {
   grid-area: 4/1/5/2;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   z-index: 1;
 }
-.contact-me #socials button {
+.standard-layout #socials button {
   background-color: brown;
   width: 100%;
   height: 100%;
   border: 3px solid black;
 }
-.contact-me section {
+.standard-layout section {
   grid-area: 3/1/-1/-1;
   background-color: burlywood;
   z-index: 0;
@@ -80,10 +80,10 @@ article nav {
   flex-direction: column;
   align-items: center;
 }
-.contact-me section p {
+.standard-layout section p {
   font-weight: 800;
 }
-.contact-me section form > #fname {
+.standard-layout section form > #fname {
   display: inline;
 }
 
