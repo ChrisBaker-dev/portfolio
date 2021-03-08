@@ -86,5 +86,19 @@ article nav {
 .standard-layout section form > #fname {
   display: inline;
 }
+.standard-layout .projects {
+  grid-area: 3/1/-1/-1;
+  background-color: sandybrown;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.standard-layout .projects .project-post {
+  width: 500px;
+  height: 100px;
+  background-color: seashell;
+  border: 3px solid black;
+}
 
 /*# sourceMappingURL=style.css.map */
