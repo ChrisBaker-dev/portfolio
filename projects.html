@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="topNav" id="hamNav">
+        <a href="#projects.html" class="active">Projects</a>
+        <a href="#index.html">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">About Me</a>
+        <a href="#">Contact Me</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <nav class="socialsNav">
+        <button>Twitter</button>
+        <button>Github</button>
+        <button>LinkdIn</button>
+        <button>Resume</button>
+    </nav>
+    <main class="layout">
+            <section class="projectPost">
+                <!-- <h3>Project 1</h3> -->
+                <img class="projectImage" src="https://picsum.photos/200/300" alt="">
+                <section class="projectInfo">
+                    Project 1
+                    <section class="projectDescription">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    </section>
+                    <section class="projectSkills">
+                        <ul>
+                            <li>python</li>
+                            <li>algorithms</li>
+                            <li>etc...</li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+            <section class="projectPost">
+            </section>
+            <section class="projectPost"></section>
+            <section class="projectPost"></section>            
+            <section class="projectPost"></section>
+    </main>
+    <script>
+        function hamburgerNav() {
+            var x = document.getElementById("hamNav");
+            if (x.className === "topNav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topNav";
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
