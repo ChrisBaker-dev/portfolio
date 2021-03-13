@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+    </style>
+</head>
+<body>
+    <nav class="topNav" id="hamNav">
+        <a href="#about.html" class="active">About Me</a>
+        <a href="#index.html">Home</a>
+        <a href="#projects.html">Projects</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact Me</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <nav class="socialsNav">
+        <button>Twitter</button>
+        <button>Github</button>
+        <button>LinkdIn</button>
+        <button>Resume</button>
+    </nav>
+    <main class="layout">
+        <img class="profileImage" src="profile2.jpg" alt="Profile Image">
+        <section class="topDescription">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolores consequuntur ex suscipit saepe in quas illo voluptas distinctio voluptatum, odio quidem aspernatur animi reprehenderit impedit soluta beatae corrupti! Inventore!</p>
+        </section>
+        <section class="aboutTimelineLeft">
+            <div class="polaroid">
+                <img class="polaroidImage" src="chrisFirefighter.jpeg" alt="chrisFirefighter">
+                <h5 class="polaroidDate"><b>May 2013 - Graduated Fire Academy</b></h5>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dolor officia odio aliquam ratione cumque corrupti? Blanditiis delectus at animi veniam odit. Iste, cupiditate id dolorum maxime illum nisi vero.</p>
+        </section>
+        <section class="aboutTimelineRight">
+            <div class="polaroid">
+                <img class="polaroidImage" src="chrisFirefighter.jpeg" alt="chrisFirefighter">
+                <h5 class="polaroidDate"><b>May 2013 - Graduated Fire Academy</b></h5>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dolor officia odio aliquam ratione cumque corrupti? Blanditiis delectus at animi veniam odit. Iste, cupiditate id dolorum maxime illum nisi vero.</p>
+        </section>
+
+    </main>
+    <script>
+        function hamburgerNav() {
+            var x = document.getElementById("hamNav");
+            if (x.className === "topNav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topNav";
+            }
+        }
+    </script>
+</body>
+</html>

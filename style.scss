@@ -15,6 +15,19 @@
   border: 3px solid black;
 }
 
+@mixin aboutTimeline {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 5px;
+  // border: 2px solid black;
+  max-width: 850px;
+
+}
+
 // .height {
 //   height: 100%;
 // }
@@ -192,7 +205,6 @@ body {
   display: grid;
   grid-template-columns: 75px 1fr;
   justify-items: center;
-  height: 100vh;
 }
 
 .projectPost {
@@ -286,7 +298,109 @@ body {
   width: 70%;
 }
 
+// Circular style profile image - About Me
+.profileImage {
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  align-content: center;
+}
 
+// Current description About Me - Below profile image
+.topDescription {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  p {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 100%;
+    margin-right: 5px;
+    max-width: 600px;
+  }
+}
+
+// Polaroid Container - holds image and date text
+.polaroid {
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  box-shadow: 5px 3px 5px grey;
+}
+
+// Image within polaroid
+.polaroidImage{
+  width: 80%;
+  height: 70%;
+  object-fit: contain;
+  align-self: center;
+  margin-top: 10px;
+  background-color: black;
+}
+
+// Date text for polaroid
+.polaroidDate {
+  font-family: 'Dancing Script', cursive;
+  align-self: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 90%;
+  height: 100%;
+  margin-bottom: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-top: 3px;
+  text-align: center;
+}
+
+// Container for timeline elements
+.aboutTimelineLeft {
+  @include aboutTimeline();
+}
+.aboutTimelineRight {
+  @include aboutTimeline();
+}
+
+@media screen and (min-width: 850px) {
+
+  .aboutTimelineLeft {
+    flex-direction: row;
+
+    p {
+      margin-left: 10%;
+      margin-right: 10%;
+      order: 2;
+    }
+  }
+  .polaroid {
+    min-width: 250px;
+    order: 1;
+  }
+
+  .aboutTimelineRight {
+    flex-direction: row;
+
+    p {
+      margin-left: 10%;
+      margin-right: 10%;
+      order: 1;
+    }
+  }
+  .polaroid {
+    min-width: 250px;
+    order: 2;
+  }
+
+}
 
 
 
