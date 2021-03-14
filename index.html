@@ -5,18 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Christopher Baker</title>
   </head>
   <body>
-      <article>
-        <figure id="profile-image">Profile Image</figure>
-        <main class="home-page">about me </main>
-        <nav id="features">Navbar
-          <button>Projects</button>
-          <button>Contact Me</button>
-          <button>Blog</button>
-        </nav>
-        <nav id="socials">Social</nav>
-      </article>
+    <nav class="topNav" id="hamNav">
+      <a href="/index.html" class="active">Home</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html">About Me</a>
+      <a href="/contactMe.html">Contact Me</a>
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerNav()">
+          <i class="fa fa-bars"></i>
+      </a>
+  </nav>
+  <nav class="socialsNav">
+    <button>Twitter</button>
+    <button>Github</button>
+    <button>LinkdIn</button>
+    <button>Resume</button>
+  </nav>
+    <main class="homeLayout">
+      <img class="profileImageHome" src="profile2.jpg" alt="Profile Image">
+    </main>
+    <script>
+      function hamburgerNav() {
+          var x = document.getElementById("hamNav");
+          if (x.className === "topNav") {
+              x.className += " responsive";
+          } else {
+              x.className = "topNav";
+          }
+      }
+  </script>
   </body>
 </html>

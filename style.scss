@@ -237,6 +237,7 @@ body {
 
 }
 
+// Ecompassing project skills - list
 .projectSkills {
   display: flex;
   text-align: left;
@@ -245,6 +246,7 @@ body {
   border-top: 2px solid black;
 }
 
+// Blog Post Container
 .blogPost {
   @include postVariables();
   height: 400px;
@@ -253,6 +255,7 @@ body {
   max-width: 500px;
 }
 
+// Blog post title
 .blogTitle {
   align-self: center;
 }
@@ -402,5 +405,28 @@ body {
 
 }
 
+// Homepage Layout
+.homeLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: seashell;
+}
+
+// Homepage profile image
+.profileImageHome {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.socialsNavHome {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 

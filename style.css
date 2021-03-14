@@ -319,5 +319,26 @@ body {
     order: 2;
   }
 }
+.homeLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: seashell;
+}
+
+.profileImageHome {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.socialsNavHome {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /*# sourceMappingURL=style.css.map */
