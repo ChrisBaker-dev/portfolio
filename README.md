@@ -1,4 +1,5 @@
 # Website URL
+https://admiring-nightingale-0b28e5.netlify.app/
 
 # Purpose:
 To build a solid foundational website that reflects my personal skills, interests and abilities. My goal is to make a webpage that is:
@@ -65,17 +66,22 @@ Icons:
 ### about.html
 ![about me wireframe](/docs/aboutMeWireframe.png)
 
-## contactMe.html
+### contactMe.html
 ![contact me wireframe](/docs/contactMeWireframe.png)
 
 # Tech Stack
 1. html
 2. CSS
-3. Javascript
+3. SCSS
+4. Javascript
 
 # Deployment
 Netlify is my deployment platform of choice
 
 # Target Audience
 Prospective Employers | Professionals | Tech Enthusiasts
+
+# My github respository
+https://github.com/ChrisBaker-dev/portfolio
+
 
