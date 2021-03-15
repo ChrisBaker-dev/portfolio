@@ -212,6 +212,10 @@ body {
   display: flex;
   flex-direction: row;
   max-width: 600px;
+
+  h4 {
+    display: none;
+  }
 }
 
 .projectImage {
@@ -235,6 +239,11 @@ body {
   margin-top: 10px;
   margin-bottom: 5px;
 
+  // Semantic Heading for project description
+  h4 {
+    display: none;
+  }
+
 }
 
 // Ecompassing project skills - list
@@ -244,6 +253,12 @@ body {
   justify-content: left center;
   margin-top: 5px;
   border-top: 2px solid black;
+
+  // Semantic Heading for project skills
+  h4 {
+    display: none;
+  }
+
 }
 
 // Blog Post Container
@@ -285,6 +300,10 @@ body {
   margin-bottom: 5px;
   overflow: hidden;
 
+  h5 {
+    display: none;
+  }
+
 }
 
 .form {
@@ -319,6 +338,10 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+
+  h4 {
+    display: none;
+  }
 
   p {
     grid-column-start: 2;
@@ -420,13 +443,154 @@ body {
   margin-right: auto;
 }
 
+// Socials quick links at bottom middle of home page
 .socialsNavHome {
+  width: 100%;
   display: flex;
   flex-direction: row;
   position: fixed;
   bottom: 0%;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: space-evenly;
 }
 
+// Welcoming content to portfolio
+.homeMessage {
+  display: flex;
+  flex-direction: column;
+}
+
+// Background coloring for homepage
+.indexHtml {
+  background-color: seashell;
+}
+
+// Nav bar used only in large screen home page
+.fullSizeNav {
+  display: none;
+
+  button {
+    display: none;
+  }
+}
+
+// Homepage layout
+@media screen and (min-width: 900px) {
+
+  .homeLayout {
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    grid-template-rows: 225px 1fr 75px;
+    grid-template-areas: "photo main"
+                         "nav main" 
+                         "socials main";
+    background-color: seashell;
+    height: 100%;
+    width: 100%;
+  }
+  
+  // Homepage profile image
+  .profileImageHome {
+    border-radius: 50%;
+    overflow: hidden;
+    grid-area: 1 / 1 / 2 / 2;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  // Socials quick links at bottom middle of home page
+  .socialsNavHome {
+    grid-area: socials;
+    display: flex;
+    flex-direction: row;
+    position: initial;
+    bottom: none;
+    margin-left: 20px;
+  }
+
+  .fullSizeNav {
+    grid-area: nav;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+
+    a {
+      margin-left: auto;
+      margin-right: auto;
+      text-decoration: none;
+      height: 30px;
+      width: 150px;
+      font-weight: 700;
+      font-size: 1em;
+      color: black;
+
+      button {
+        display: inline;
+        border: none;
+        background-color: unset;
+        height: 30px;
+        width: 150px;
+        font-weight: 700;
+        font-size: 1em;
+      }
+
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  }
+  
+  // Welcoming content to portfolio
+  .homeMessage {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 15px;
+  }
+
+
+// Top nav bar removed on large home screen
+  .indexHtml{
+    height: 100%;
+
+    body {
+      height: 100%;
+    }
+
+    .topNav {
+      overflow: hidden;
+      background-color: black;
+    
+      a {
+          display: none;
+      }
+    
+      a:hover {
+          display: none;
+      }
+    
+      a.active {
+          display: none;
+      }
+    
+      .icon {
+          display: none;
+      }
+    }
+
+
+  }
+
+
+}
+
+// Background format contact me
+.contactMeHtml {
+  background-color: seashell;
+}
 

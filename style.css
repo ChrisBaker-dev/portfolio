@@ -119,6 +119,9 @@ body {
   flex-direction: row;
   max-width: 600px;
 }
+.projectPost h4 {
+  display: none;
+}
 
 .projectImage {
   border: 3px solid black;
@@ -141,6 +144,9 @@ body {
   margin-top: 10px;
   margin-bottom: 5px;
 }
+.projectDescription h4 {
+  display: none;
+}
 
 .projectSkills {
   display: flex;
@@ -148,6 +154,9 @@ body {
   justify-content: left center;
   margin-top: 5px;
   border-top: 2px solid black;
+}
+.projectSkills h4 {
+  display: none;
 }
 
 .blogPost {
@@ -195,6 +204,9 @@ body {
   margin-bottom: 5px;
   overflow: hidden;
 }
+.blogArticle h5 {
+  display: none;
+}
 
 .form {
   height: 100%;
@@ -226,6 +238,9 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.topDescription h4 {
+  display: none;
 }
 .topDescription p {
   grid-column-start: 2;
@@ -333,12 +348,123 @@ body {
 }
 
 .socialsNavHome {
+  width: 100%;
   display: flex;
   flex-direction: row;
   position: fixed;
   bottom: 0%;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: space-evenly;
+}
+
+.homeMessage {
+  display: flex;
+  flex-direction: column;
+}
+
+.indexHtml {
+  background-color: seashell;
+}
+
+.fullSizeNav {
+  display: none;
+}
+.fullSizeNav button {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .homeLayout {
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    grid-template-rows: 225px 1fr 75px;
+    grid-template-areas: "photo main" "nav main" "socials main";
+    background-color: seashell;
+    height: 100%;
+    width: 100%;
+  }
+
+  .profileImageHome {
+    border-radius: 50%;
+    overflow: hidden;
+    grid-area: 1/1/2/2;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .socialsNavHome {
+    grid-area: socials;
+    display: flex;
+    flex-direction: row;
+    position: initial;
+    bottom: none;
+    margin-left: 20px;
+  }
+
+  .fullSizeNav {
+    grid-area: nav;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+  .fullSizeNav a {
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    height: 30px;
+    width: 150px;
+    font-weight: 700;
+    font-size: 1em;
+    color: black;
+  }
+  .fullSizeNav a button {
+    display: inline;
+    border: none;
+    background-color: unset;
+    height: 30px;
+    width: 150px;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  .fullSizeNav a:hover {
+    text-decoration: underline;
+  }
+
+  .homeMessage {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 15px;
+  }
+
+  .indexHtml {
+    height: 100%;
+  }
+  .indexHtml body {
+    height: 100%;
+  }
+  .indexHtml .topNav {
+    overflow: hidden;
+    background-color: black;
+  }
+  .indexHtml .topNav a {
+    display: none;
+  }
+  .indexHtml .topNav a:hover {
+    display: none;
+  }
+  .indexHtml .topNav a.active {
+    display: none;
+  }
+  .indexHtml .topNav .icon {
+    display: none;
+  }
+}
+.contactMeHtml {
+  background-color: seashell;
 }
 
 /*# sourceMappingURL=style.css.map */
