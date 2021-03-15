@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="topNav" id="hamNav">
+      <a href="/src/blog.html" class="active">Blog</a>
+      <a href="/src/index.html">Home</a>
+      <a href="/src/projects.html">Projects</a>
+      <a href="/src/about.html">About Me</a>
+      <a href="/src/contactMe.html">Contact Me</a>
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+    <nav class="socialsNav">
+      <a href="https://twitter.com">
+        <img src="twitterIcon.png" alt="" />
+      </a>
+      <a href="https://github.com/ChrisBaker-dev">
+        <img src="githubIcon.png" alt="" />
+      </a>
+      <a href="https://www.linkedin.com/login">
+        <img src="linkedinIcon.png" alt="" />
+      </a>
+      <a href="/ChrisBakerResume.pdf">
+        <img src="resumeIcon.png" alt="" />
+      </a>
+    </nav>
+    <main class="layout">
+      <section class="blogPost">
+        <h3 class="blogTitle">Blog 1</h3>
+        <img class="blogImage" src="https://picsum.photos/200/300" alt="" />
+        <div class="blogPublish">
+          <h4>Christopher Baker</h4>
+          <h4>March 10th, 2021</h4>
+        </div>
+        <article class="blogArticle">
+          <h5>Article Description</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dignissimos sit cumque id quod, quae illum similique praesentium in
+            minus, reprehenderit eveniet magni voluptates odit fugiat accusamus
+            ad aspernatur repudiandae quos.
+          </p>
+        </article>
+      </section>
+      <section class="blogPost">
+        <h3 class="blogTitle">Blog 1</h3>
+        <img class="blogImage" src="https://picsum.photos/200/300" alt="" />
+        <div class="blogPublish">
+          <h4>Christopher Baker</h4>
+          <h4>March 10th, 2021</h4>
+        </div>
+        <article class="blogArticle">
+          <h5>Article Description</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dignissimos sit cumque id quod, quae illum similique praesentium in
+            minus, reprehenderit eveniet magni voluptates odit fugiat accusamus
+            ad aspernatur repudiandae quos.
+          </p>
+        </article>
+      </section>
+      <section class="blogPost">
+        <h3 class="blogTitle">Blog 1</h3>
+        <img class="blogImage" src="https://picsum.photos/200/300" alt="" />
+        <div class="blogPublish">
+          <h4>Christopher Baker</h4>
+          <h4>March 10th, 2021</h4>
+        </div>
+        <article class="blogArticle">
+          <h5>Article Description</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dignissimos sit cumque id quod, quae illum similique praesentium in
+            minus, reprehenderit eveniet magni voluptates odit fugiat accusamus
+            ad aspernatur repudiandae quos.
+          </p>
+        </article>
+      </section>
+      <section class="blogPost">
+        <h3 class="blogTitle">Blog 1</h3>
+        <img class="blogImage" src="https://picsum.photos/200/300" alt="" />
+        <div class="blogPublish">
+          <h4>Christopher Baker</h4>
+          <h4>March 10th, 2021</h4>
+        </div>
+        <article class="blogArticle">
+          <h5>Article Description</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dignissimos sit cumque id quod, quae illum similique praesentium in
+            minus, reprehenderit eveniet magni voluptates odit fugiat accusamus
+            ad aspernatur repudiandae quos.
+          </p>
+        </article>
+      </section>
+      <section class="blogPost">
+        <h3 class="blogTitle">Blog 1</h3>
+        <img class="blogImage" src="https://picsum.photos/200/300" alt="" />
+        <div class="blogPublish">
+          <h4>Christopher Baker</h4>
+          <h4>March 10th, 2021</h4>
+        </div>
+        <article class="blogArticle">
+          <h5>Article Description</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dignissimos sit cumque id quod, quae illum similique praesentium in
+            minus, reprehenderit eveniet magni voluptates odit fugiat accusamus
+            ad aspernatur repudiandae quos.
+          </p>
+        </article>
+      </section>
+    </main>
+    <script>
+      function hamburgerNav() {
+        var x = document.getElementById("hamNav");
+        if (x.className === "topNav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topNav";
+        }
+      }
+    </script>
+  </body>
+</html>

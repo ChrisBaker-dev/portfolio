@@ -1,0 +1,539 @@
+// SCSS Variables
+// Container design/shadowing
+@mixin postVariables {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  width: 95%;
+  height: 250px;
+  background-color: white;
+  border: 1px solid black;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 5px 3px 10px grey;
+}
+
+// Standar formatting border
+@mixin imageBorder {
+  border: 3px solid black;
+}
+
+// Variables for About Me content pages
+@mixin aboutTimeline {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 5px;
+  // border: 2px solid black;
+  max-width: 850px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#socials-nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+
+  button {
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    border: 3px solid black;
+  }
+}
+
+// Dropdown nav menu
+.topNav {
+  overflow: hidden;
+  background-color: black;
+
+  // Links within nav menu
+  a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  // Hover nav menu
+  a:hover {
+    background-color: green;
+    color: black;
+  }
+
+  // Current active page format
+  a.active {
+    background-color: lightblue;
+    color: black;
+  }
+
+  // Icon not displayed unless screen is correct size
+  .icon {
+    display: none;
+  }
+}
+
+// Media call for nav menu
+@media screen and (max-width: 600px) {
+  // Only display current page
+  .topNav a:not(:first-child) {
+    display: none;
+  }
+
+  // Icon now visible
+  .topNav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+// Mediua call for nav menu
+@media screen and (max-width: 600px) {
+  .topNav.responsive {
+    position: relative;
+  }
+
+  // Display icon in top right
+  .topNav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  // Display links to other pages
+  .topNav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+// Lose margins
+body {
+  margin: 0;
+}
+
+// Social media icons
+.socialsNav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 35%;
+
+  button {
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    border: 3px solid black;
+  }
+}
+
+// Standard layout used by all pages except index
+.layout {
+  background-color: seashell;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  justify-items: center;
+}
+
+// Project Post container
+.projectPost {
+  @include postVariables();
+  display: flex;
+  flex-direction: row;
+  max-width: 600px;
+
+  // Semantic header - not to be displayed
+  h4 {
+    display: none;
+  }
+}
+
+// Images within project container
+.projectImage {
+  @include imageBorder();
+  height: 90%;
+  width: 50%;
+  align-self: center;
+  margin-left: 5px;
+}
+
+// Container for project information
+.projectInfo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+}
+
+// Description of project
+.projectDescription {
+  margin-top: 10px;
+  margin-bottom: 5px;
+
+  // Semantic Heading for project description
+  h4 {
+    display: none;
+  }
+}
+
+// Ecompassing project skills - list
+.projectSkills {
+  display: flex;
+  text-align: left;
+  justify-content: left;
+  margin-top: 5px;
+  border-top: 2px solid black;
+
+  // Semantic Heading for project skills
+  h4 {
+    display: none;
+  }
+}
+
+// Blog Post Container
+.blogPost {
+  @include postVariables();
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+// Blog post title
+.blogTitle {
+  align-self: center;
+}
+
+// Blog Image within blog container
+.blogImage {
+  @include imageBorder();
+  height: 45%;
+  width: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 400px;
+  align-self: center;
+}
+
+// Blog publisher and date formatting
+.blogPublish {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+// Blog content
+.blogArticle {
+  width: 90%;
+  height: 90%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  align-self: center;
+  margin-bottom: 5px;
+  overflow: hidden;
+
+  // Header for semantic users - not displayed
+  h5 {
+    display: none;
+  }
+}
+
+// contact me form
+.form {
+  height: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// contact me message box
+.contactMessage {
+  height: 200px;
+  width: 70%;
+}
+
+// Circular style profile image - About Me
+.profileImage {
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  align-content: center;
+}
+
+// Current description About Me - Below profile image
+.topDescription {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  // header for semantic users - not displayed
+  h4 {
+    display: none;
+  }
+
+  // Content on about me page
+  p {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 100%;
+    margin-right: 5px;
+    max-width: 600px;
+  }
+}
+
+// Polaroid Container - holds image and date text
+.polaroid {
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  box-shadow: 5px 3px 5px grey;
+}
+
+// Image within polaroid
+.polaroidImage {
+  width: 80%;
+  height: 70%;
+  object-fit: contain;
+  align-self: center;
+  margin-top: 10px;
+  background-color: black;
+}
+
+// Date text for polaroid
+.polaroidDate {
+  font-family: "Dancing Script", cursive;
+  align-self: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 90%;
+  height: 100%;
+  margin-bottom: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-top: 3px;
+  text-align: center;
+}
+
+// Container for timeline elements
+.aboutTimelineLeft {
+  @include aboutTimeline();
+}
+.aboutTimelineRight {
+  @include aboutTimeline();
+}
+
+// about me page polaroids switch from verticle alignment
+// to horizontal with alternating photo sides
+@media screen and (min-width: 850px) {
+  // flexbox ordering for alternation effect
+  .aboutTimelineLeft {
+    flex-direction: row;
+
+    p {
+      margin-left: 10%;
+      margin-right: 10%;
+      order: 2;
+    }
+  }
+  .polaroid {
+    min-width: 250px;
+    order: 1;
+  }
+
+  .aboutTimelineRight {
+    flex-direction: row;
+
+    p {
+      margin-left: 10%;
+      margin-right: 10%;
+      order: 1;
+    }
+  }
+  .polaroid {
+    min-width: 250px;
+    order: 2;
+  }
+}
+
+// Homepage Layout
+.homeLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: seashell;
+}
+
+// Homepage profile image
+.profileImageHome {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Socials quick links at bottom middle of home page
+.socialsNavHome {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0%;
+  justify-content: space-evenly;
+}
+
+// Welcoming content to portfolio
+.homeMessage {
+  display: flex;
+  flex-direction: column;
+}
+
+// Background coloring for homepage
+.indexHtml {
+  background-color: seashell;
+}
+
+// Nav bar used only in large screen home page
+.fullSizeNav {
+  display: none;
+
+  button {
+    display: none;
+  }
+}
+
+// Homepage layout - Desktop
+@media screen and (min-width: 900px) {
+  .homeLayout {
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    grid-template-rows: 225px 1fr 75px;
+    grid-template-areas:
+      "photo main"
+      "nav main"
+      "socials main";
+    background-color: seashell;
+    height: 100%;
+    width: 100%;
+  }
+
+  // Homepage profile image
+  .profileImageHome {
+    border-radius: 50%;
+    overflow: hidden;
+    grid-area: 1 / 1 / 2 / 2;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  // Socials quick links at bottom middle of home page
+  .socialsNavHome {
+    grid-area: socials;
+    display: flex;
+    flex-direction: row;
+    position: initial;
+    margin-left: 20px;
+  }
+
+  // Nav menu only used on desktop sized index page
+  .fullSizeNav {
+    grid-area: nav;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+
+    // navbar changes to links on left of index page
+    a {
+      margin-left: auto;
+      margin-right: auto;
+      text-decoration: none;
+      height: 30px;
+      width: 150px;
+      font-weight: 700;
+      font-size: 1em;
+      color: black;
+
+      button {
+        display: inline;
+        border: none;
+        background-color: unset;
+        height: 30px;
+        width: 150px;
+        font-weight: 700;
+        font-size: 1em;
+      }
+    }
+
+    // effects
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Welcoming content to portfolio
+  .homeMessage {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 15px;
+  }
+
+  // Top nav bar removed on large home screen
+  .indexHtml {
+    height: 100%;
+
+    body {
+      height: 100%;
+    }
+
+    .topNav {
+      overflow: hidden;
+      background-color: black;
+
+      a {
+        display: none;
+      }
+
+      a:hover {
+        display: none;
+      }
+
+      a.active {
+        display: none;
+      }
+
+      .icon {
+        display: none;
+      }
+    }
+  }
+}
+
+// Background format contact me
+.contactMeHtml {
+  background-color: seashell;
+}
